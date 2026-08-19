@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mtzzin sport | Clássicos & Antigos</title>
+    <title>mtzzin sport | Especial Chevrolet Opala</title>
     <style>
         /* Reset e Configurações Gerais */
         * {
@@ -13,128 +13,158 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d0d11;
-            color: #e1e1e6;
-            line-height: 1.6;
+            font-family: 'Cinzel', 'Segoe UI', Georgia, serif;
+            background-color: #0b0b0e;
+            color: #e5e5e7;
+            line-height: 1.7;
         }
 
-        /* Cabeçalho */
+        /* Cabeçalho Elegante */
         header {
-            background: linear-gradient(135deg, #121218, #1c1a24);
-            border-bottom: 2px solid #d97706; /* Laranja/Âmbar retrô/esportivo */
-            padding: 45px 20px;
+            background: linear-gradient(180deg, #14141c 0%, #0b0b0e 100%);
+            border-bottom: 1px solid #c5a059;
+            padding: 60px 20px 40px;
             text-align: center;
         }
 
         header h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             color: #ffffff;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
+            font-weight: 300;
         }
 
         header h1 span {
-            color: #d97706;
+            color: #c5a059; /* Dourado Clássico */
+            font-weight: 700;
         }
 
         header p {
-            color: #9ca3af;
-            font-size: 1.1rem;
-            margin-top: 8px;
+            color: #a1a1aa;
+            font-size: 1rem;
+            margin-top: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         /* Layout Principal */
         main {
-            max-width: 1100px;
-            margin: 40px auto;
+            max-width: 1200px;
+            margin: 50px auto;
             padding: 0 20px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            color: #d1d1d6;
+        }
+
+        .intro h2 {
+            color: #c5a059;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
         }
 
-        /* Cartões dos Posts */
+        /* Cartões Premium das Versões */
         article.card {
-            background-color: #16161e;
-            border-radius: 12px;
+            background-color: #121218;
+            border-radius: 8px;
             overflow: hidden;
-            border: 1px solid #262636;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 1px solid #22222e;
+            transition: all 0.4s ease;
         }
 
         article.card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(217, 119, 6, 0.25);
-            border-color: #d97706;
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(197, 160, 89, 0.15);
+            border-color: #c5a059;
         }
 
         .card-img {
             width: 100%;
-            height: 210px;
+            height: 220px;
             object-fit: cover;
+            filter: brightness(0.9);
+            transition: filter 0.4s ease;
+        }
+
+        article.card:hover .card-img {
+            filter: brightness(1);
         }
 
         .card-content {
-            padding: 20px;
+            padding: 25px;
         }
 
         .card-tag {
             display: inline-block;
-            background-color: #d97706;
-            color: #ffffff;
-            font-size: 0.75rem;
-            font-weight: bold;
-            padding: 4px 10px;
-            border-radius: 20px;
+            border: 1px solid #c5a059;
+            color: #c5a059;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 12px;
+            border-radius: 4px;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
 
-        .card-content h2 {
-            font-size: 1.3rem;
+        .card-content h3 {
+            font-size: 1.4rem;
             color: #ffffff;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-weight: 400;
         }
 
         .card-content p {
-            color: #9ca3af;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
+            color: #9090a0;
+            font-size: 0.92rem;
+            margin-bottom: 22px;
         }
 
-        /* Botão */
+        /* Botão Minimalista */
         .btn {
             display: inline-block;
             width: 100%;
             text-align: center;
             background-color: transparent;
-            color: #ffffff;
-            border: 1px solid #d97706;
-            padding: 10px 0;
-            border-radius: 6px;
+            color: #c5a059;
+            border: 1px solid #c5a059;
+            padding: 12px 0;
+            border-radius: 4px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.2s ease, color 0.2s ease;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
         }
 
         .btn:hover {
-            background-color: #d97706;
-            color: #ffffff;
+            background-color: #c5a059;
+            color: #0b0b0e;
         }
 
         /* Rodapé */
         footer {
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-            background-color: #121218;
-            border-top: 1px solid #262636;
-            color: #6b7280;
-            font-size: 0.9rem;
+            padding: 40px 20px;
+            margin-top: 80px;
+            background-color: #08080a;
+            border-top: 1px solid #1a1a24;
+            color: #52525b;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -142,42 +172,80 @@
 
     <header>
         <h1>mtzzin <span>sport</span></h1>
-        <p>A era de ouro dos clássicos nacionais e mundiais</p>
+        <p>A Trajetória do Ícone Chevrolet Opala</p>
     </header>
 
     <main>
+        <section class="intro">
+            <h2>Linha do Tempo & Versões</h2>
+            <p>Lançado no Salão do Automóvel de 1968, o Opala uniu a engenharia alemã do Opel Rekord ao estilo dos motores americanos. Conheça as principais edições que marcaram a história.</p>
+        </section>
+
         <div class="grid-container">
 
-            <!-- Card 1: Opala Comodoro -->
+            <!-- Versão 1: Especial / Standard -->
             <article class="card">
-                <img class="card-img" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Carro Antigo">
+                <img class="card-img" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Opala Especial/Standard">
                 <div class="card-content">
-                    <span class="card-tag">Nacional</span>
-                    <h2>Chevrolet Opala: A Lenda do 6 Cilindros</h2>
-                    <p>Conheça a história do icônico motor 4.1 de 6 cilindros em linha que marcou gerações nas ruas e pistas brasileiras entre os anos 70 e 90.</p>
-                    <a href="#" class="btn">Ler Artigo Completo</a>
+                    <span class="card-tag">1968 - 1970</span>
+                    <h3>Opala Especial / Standard</h3>
+                    <p>A versão de entrada do modelo. Lançada em 1968, trouxe o visual inicial com faróis redondos, acabamento simplificado e motores 3800 de 4 ou 6 cilindros.</p>
+                    <a href="#" class="btn">Conhecer História</a>
                 </div>
             </article>
 
-            <!-- Card 2: Ford Maverick -->
+            <!-- Versão 2: Luxo / Gran Luxo -->
             <article class="card">
-                <img class="card-img" src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=600&q=80" alt="Carro Esportivo Antigo">
+                <img class="card-img" src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=600&q=80" alt="Opala Gran Luxo">
                 <div class="card-content">
-                    <span class="card-tag">Muscle Car</span>
-                    <h2>Ford Maverick GT V8: O Ronco Inconfundível</h2>
-                    <p>O lendário motor 302 V8 e a carroceria cupê transformaram o Maverick em um dos muscle cars mais cobiçados da história automotiva do Brasil.</p>
-                    <a href="#" class="btn">Ler Artigo Completo</a>
+                    <span class="card-tag">1971 - 1974</span>
+                    <h3>Opala Gran Luxo</h3>
+                    <p>O topo de linha nos anos 70. Destacava-se pelo teto de vinil, interior requintado com bancos individuais e acabamentos de madeira no painel.</p>
+                    <a href="#" class="btn">Conhecer História</a>
                 </div>
             </article>
 
-            <!-- Card 3: Dodge Charger -->
+            <!-- Versão 3: SS (Super Sport) -->
             <article class="card">
-                <img class="card-img" src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600&q=80" alt="Carro Antigo Clássico">
+                <img class="card-img" src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600&q=80" alt="Opala SS">
                 <div class="card-content">
-                    <span class="card-tag">Clássico</span>
-                    <h2>Dodge Charger R/T: O Gigante V8</h2>
-                    <p>Um dos carros mais potentes produzidos no país na década de 70, famoso por seu design agressivo e pelo imponente motor 318 V8.</p>
-                    <a href="#" class="btn">Ler Artigo Completo</a>
+                    <span class="card-tag">Esportivo (1971)</span>
+                    <h3>Opala SS (Super Sport)</h3>
+                    <p>A lendária versão esportiva de fábrica. Equipado com motor 250-S, câmbio no assoalho, faixas esportivas pretas e volante exclusivo de 3 raios.</p>
+                    <a href="#" class="btn">Conhecer História</a>
+                </div>
+            </article>
+
+            <!-- Versão 4: Comodoro -->
+            <article class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Opala Comodoro">
+                <div class="card-content">
+                    <span class="card-tag">1975 - 1992</span>
+                    <h3>Opala Comodoro</h3>
+                    <p>Introduzido em 1975 para substituir o Gran Luxo. Trouxe sofisticação com direção hidráulica, interior aveludado e o motor 4.1 de 6 cilindros.</p>
+                    <a href="#" class="btn">Conhecer História</a>
+                </div>
+            </article>
+
+            <!-- Versão 5: Caravan -->
+            <article class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=600&q=80" alt="Caravan">
+                <div class="card-content">
+                    <span class="card-tag">Station Wagon</span>
+                    <h3>Caravan (Perua Opala)</h3>
+                    <p>A versão perua derivada da família Opala. Combinava o espaço para a família com o mesmo desempenho mecânico dos motores 4 e 6 cilindros.</p>
+                    <a href="#" class="btn">Conhecer História</a>
+                </div>
+            </article>
+
+            <!-- Versão 6: Diplomata -->
+            <article class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="Opala Diplomata">
+                <div class="card-content">
+                    <span class="card-tag">1980 - 1992</span>
+                    <h3>Opala Diplomata</h3>
+                    <p>O auge do luxo nacional nos anos 80 e 90. Equipado com ar-condicionado, vidros elétricos, retrovisores elétricos e o famoso motor 4.1 / 250-S.</p>
+                    <a href="#" class="btn">Conhecer História</a>
                 </div>
             </article>
 
@@ -185,7 +253,7 @@
     </main>
 
     <footer>
-        &copy; 2026 mtzzin sport. Todos os direitos reservados.
+        &copy; 2026 mtzzin sport — Homenagem ao Chevrolet Opala.
     </footer>
 
 </body>
