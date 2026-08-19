@@ -3,141 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso em Vídeo</title>
+    <title>mtzzin sport | Clássicos & Antigos</title>
     <style>
-        /* Estilos Globais */
+        /* Reset e Configurações Gerais */
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d0d11;
+            color: #e1e1e6;
             line-height: 1.6;
-            background-color: #f0f2f5;
-            color: #333;
-            padding: 20px 10px;
-        }
-
-        /* Container Principal */
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
         /* Cabeçalho */
         header {
+            background: linear-gradient(135deg, #121218, #1c1a24);
+            border-bottom: 2px solid #d97706; /* Laranja/Âmbar retrô/esportivo */
+            padding: 45px 20px;
             text-align: center;
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
         }
 
         header h1 {
-            color: #1a73e8;
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        header img {
-            max-width: 220px;
-            height: auto;
-        }
-
-        /* Cartões dos Cursos (Articles) */
-        article {
-            background-color: #fafafa;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 25px;
-            overflow: hidden; /* Mantém o layout alinhado com a imagem flutuante */
-        }
-
-        article h2 {
-            color: #2c3e50;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-        }
-
-        /* Imagem ao Lado do Texto */
-        img.lado {
-            float: left;
-            max-width: 120px;
-            height: auto;
-            margin-right: 20px;
-            margin-bottom: 10px;
-            border-radius: 6px;
-        }
-
-        article p {
-            margin-bottom: 12px;
-            font-size: 0.98rem;
-        }
-
-        /* Links de Acesso */
-        article p a {
-            display: inline-block;
-            margin-top: 5px;
+            font-size: 2.8rem;
             color: #ffffff;
-            background-color: #1a73e8;
-            padding: 8px 16px;
-            text-decoration: none;
-            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header h1 span {
+            color: #d97706;
+        }
+
+        header p {
+            color: #9ca3af;
+            font-size: 1.1rem;
+            margin-top: 8px;
+        }
+
+        /* Layout Principal */
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Cartões dos Posts */
+        article.card {
+            background-color: #16161e;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #262636;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        article.card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(217, 119, 6, 0.25);
+            border-color: #d97706;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background-color: #d97706;
+            color: #ffffff;
+            font-size: 0.75rem;
             font-weight: bold;
-            transition: background-color 0.2s ease;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
-        article p a:hover {
-            background-color: #1557b0;
+        .card-content h2 {
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 10px;
         }
 
-        abbr {
-            text-decoration: underline dotted #1a73e8;
-            cursor: help;
+        .card-content p {
+            color: #9ca3af;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
         }
 
-        /* Ajustes para Telas Menores (Celulares) */
-        @media (max-width: 600px) {
-            img.lado {
-                float: none;
-                display: block;
-                margin: 0 auto 15px auto;
-            }
+        /* Botão */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #d97706;
+            padding: 10px 0;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
 
-            main {
-                padding: 15px;
-            }
+        .btn:hover {
+            background-color: #d97706;
+            color: #ffffff;
+        }
 
-            article {
-                text-align: center;
-            }
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            background-color: #121218;
+            border-top: 1px solid #262636;
+            color: #6b7280;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>mtzzin <span>sport</span></h1>
+        <p>A era de ouro dos clássicos nacionais e mundiais</p>
+    </header>
+
     <main>
-        <header>
-            <h1>Cursos Grátis</h1>
-            <img src="imagens/curso-em-video-cor.png" alt="Curso em Vídeo">
-        </header>
-        <article>
-            <h2>Curso de HTML5 com CSS3</h2>
-            <img class="lado" src="imagens/curso-html-css.png" alt="Curso HTML">
-            <p>A <abbr title="HyperText Markup Language">HTML</abbr> é uma linguagem de marcação para a criação de sites. Atualmente na versão 5, ela usa a semântica dos elementos para criar o conteúdo de uma página Web. Com as <abbr title="Cascading Style Sheets">CSS</abbr>, criamos as configurações visuais que um site vai ter.</p>
-            <p><a href="curso-html.html">Acesse o curso de HTML5</a></p>
-        </article>
-        <article>
-            <h2>Curso de JavaScript</h2>
-            <img class="lado" src="imagens/curso-javascript.png" alt="Curso JS">
-            <p><abbr title="JavaScript">JavaScript</abbr> é uma linguagem de script criada para aumentar a interatividade entre um site e seus visitantes. Os códigos em JS são executados dentro do navegador e dão acesso aos elementos HTML por meio do <abbr title="Document Object Model">DOM</abbr>.</p>
-            <p><a href="curso-js.html">Acesse o curso de JavaScript</a></p>
-        </article>
+        <div class="grid-container">
+
+            <!-- Card 1: Opala Comodoro -->
+            <article class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Carro Antigo">
+                <div class="card-content">
+                    <span class="card-tag">Nacional</span>
+                    <h2>Chevrolet Opala: A Lenda do 6 Cilindros</h2>
+                    <p>Conheça a história do icônico motor 4.1 de 6 cilindros em linha que marcou gerações nas ruas e pistas brasileiras entre os anos 70 e 90.</p>
+                    <a href="#" class="btn">Ler Artigo Completo</a>
+                </div>
+            </article>
+
+            <!-- Card 2: Ford Maverick -->
+            <article class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=600&q=80" alt="Carro Esportivo Antigo">
+                <div class="card-content">
+                    <span class="card-tag">Muscle Car</span>
+                    <h2>Ford Maverick GT V8: O Ronco Inconfundível</h2>
+                    <p>O lendário motor 302 V8 e a carroceria cupê transformaram o Maverick em um dos muscle cars mais cobiçados da história automotiva do Brasil.</p>
+                    <a href="#" class="btn">Ler Artigo Completo</a>
+                </div>
+            </article>
+
+            <!-- Card 3: Dodge Charger -->
+            <article class="card">
+                <img class="card-img" src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600&q=80" alt="Carro Antigo Clássico">
+                <div class="card-content">
+                    <span class="card-tag">Clássico</span>
+                    <h2>Dodge Charger R/T: O Gigante V8</h2>
+                    <p>Um dos carros mais potentes produzidos no país na década de 70, famoso por seu design agressivo e pelo imponente motor 318 V8.</p>
+                    <a href="#" class="btn">Ler Artigo Completo</a>
+                </div>
+            </article>
+
+        </div>
     </main>
+
+    <footer>
+        &copy; 2026 mtzzin sport. Todos os direitos reservados.
+    </footer>
+
 </body>
 </html>
