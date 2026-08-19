@@ -4,7 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso em Vídeo</title>
-    <link rel="stylesheet" href="estilos/style.css">
+    <style>
+        /* Estilos Globais */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #333;
+            padding: 20px 10px;
+        }
+
+        /* Container Principal */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #1a73e8;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        header img {
+            max-width: 220px;
+            height: auto;
+        }
+
+        /* Cartões dos Cursos (Articles) */
+        article {
+            background-color: #fafafa;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            overflow: hidden; /* Mantém o layout alinhado com a imagem flutuante */
+        }
+
+        article h2 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        /* Imagem ao Lado do Texto */
+        img.lado {
+            float: left;
+            max-width: 120px;
+            height: auto;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        article p {
+            margin-bottom: 12px;
+            font-size: 0.98rem;
+        }
+
+        /* Links de Acesso */
+        article p a {
+            display: inline-block;
+            margin-top: 5px;
+            color: #ffffff;
+            background-color: #1a73e8;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+
+        article p a:hover {
+            background-color: #1557b0;
+        }
+
+        abbr {
+            text-decoration: underline dotted #1a73e8;
+            cursor: help;
+        }
+
+        /* Ajustes para Telas Menores (Celulares) */
+        @media (max-width: 600px) {
+            img.lado {
+                float: none;
+                display: block;
+                margin: 0 auto 15px auto;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            article {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <main>
